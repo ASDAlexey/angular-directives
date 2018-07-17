@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { FirstDirectiveDirective } from './first-directive.directive';
 import { BasicComponent } from './basic/basic.component';
 import { TrackDirective } from './track.directive';
+import { OnlineDirective } from './online.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstDirectiveDirective,
     BasicComponent,
-    TrackDirective
+    TrackDirective,
+    OnlineDirective
   ],
   imports: [
     BrowserModule
