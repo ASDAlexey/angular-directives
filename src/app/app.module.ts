@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FirstDirectiveDirective } from './first-directive.directive';
+import { BasicComponent } from './basic/basic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstDirectiveDirective
+    FirstDirectiveDirective,
+    BasicComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}
