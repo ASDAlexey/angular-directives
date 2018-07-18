@@ -6,6 +6,7 @@ import { FirstDirectiveDirective } from './first-directive.directive';
 import { BasicComponent } from './basic/basic.component';
 import { TrackDirective } from './track.directive';
 import { OnlineDirective } from './online.directive';
+import { ThreeDirective } from './three.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { OnlineDirective } from './online.directive';
     FirstDirectiveDirective,
     BasicComponent,
     TrackDirective,
-    OnlineDirective
+    OnlineDirective,
+    ThreeDirective
   ],
   imports: [
     BrowserModule
