@@ -1,1 +1,8 @@
-<div></div>
+<ng-template #foo let-data="message">
+  <h1>I'm a template {{ data }}</h1>
+</ng-template>
+
+
+<div [ngTemplateOutlet]="foo" [ngTemplateOutletContext]="one"></div>
+<div [ngTemplateOutlet]="foo" [ngTemplateOutletContext]="two"></div>
+<div [ngTemplateOutlet]="foo" [ngTemplateOutletContext]="three"></div>
