@@ -11,4 +11,14 @@ export class AppComponent {
     two: 'Two is better',
     three: 'Three is best'
   };
+
+  constructor() {
+    setInterval(() => {
+      this.messages = {
+        one: 'One is awesome' + Math.random().toString().slice(0, 3),
+        two: 'Two is better' + Math.random().toString().slice(0, 3),
+        three: 'Three is best' + Math.random().toString().slice(0, 3),
+      };
+    }, 1000);
+  }
 }

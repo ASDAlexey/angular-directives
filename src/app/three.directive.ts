@@ -5,6 +5,8 @@ import { AfterViewInit, Directive, ElementRef, Input, TemplateRef, ViewContainer
 })
 export class ThreeDirective {
   @Input() set appThreeOf({ one, two, three }) {
+    this.view.clear();
+
     this.view.createEmbeddedView(this.template, { $implicit: one });
     this.view.createEmbeddedView(this.template, { $implicit: two });
     this.view.createEmbeddedView(this.template, { $implicit: three });
