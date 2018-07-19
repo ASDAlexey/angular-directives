@@ -7,6 +7,8 @@ import { BasicComponent } from './basic/basic.component';
 import { TrackDirective } from './track.directive';
 import { OnlineDirective } from './online.directive';
 import { ThreeDirective } from './three.directive';
+import { TemplateStorageComponent } from './template-storage/template-storage.component';
+import { SurroundDirective } from './surround.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ThreeDirective } from './three.directive';
     BasicComponent,
     TrackDirective,
     OnlineDirective,
-    ThreeDirective
+    ThreeDirective,
+    TemplateStorageComponent,
+    SurroundDirective
   ],
   imports: [
     BrowserModule
