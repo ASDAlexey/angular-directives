@@ -1,16 +1,14 @@
-import { AfterViewInit, Directive, ElementRef, TemplateRef, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[appThree]'
 })
-export class ThreeDirective implements AfterViewInit {
-  constructor(private el: ElementRef, private view: ViewContainerRef, private template: TemplateRef<any>) {
-    console.log(el.nativeElement);
+export class ThreeDirective {
+  @Input() set appThree(value) {
+    this.view.createEmbeddedView(this.template, { $implicit: 'Awesome' });
+    this.view.createEmbeddedView(this.template, { $implicit: 'Amazing' });
+    this.view.createEmbeddedView(this.template, { $implicit: 'Sweet' });
   }
 
-  ngAfterViewInit() {
-    this.view.createEmbeddedView(this.template);
-    this.view.createEmbeddedView(this.template);
-    this.view.createEmbeddedView(this.template);
-  }
+  constructor(private el: ElementRef, private view: ViewContainerRef, private template: TemplateRef<any>) {}
 }
