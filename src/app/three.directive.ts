@@ -4,10 +4,10 @@ import { AfterViewInit, Directive, ElementRef, Input, TemplateRef, ViewContainer
   selector: '[appThree]'
 })
 export class ThreeDirective {
-  @Input() set appThree(value) {
-    this.view.createEmbeddedView(this.template, { $implicit: 'Awesome' });
-    this.view.createEmbeddedView(this.template, { $implicit: 'Amazing' });
-    this.view.createEmbeddedView(this.template, { $implicit: 'Sweet' });
+  @Input() set appThreeOf({ one, two, three }) {
+    this.view.createEmbeddedView(this.template, { $implicit: one });
+    this.view.createEmbeddedView(this.template, { $implicit: two });
+    this.view.createEmbeddedView(this.template, { $implicit: three });
   }
 
   constructor(private el: ElementRef, private view: ViewContainerRef, private template: TemplateRef<any>) {}
